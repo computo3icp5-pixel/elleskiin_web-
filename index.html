@@ -3,24 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>elleskiin | Naturaleza de cuidado</title>
-    <link rel="stylesheet" href="../static/css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+   <link rel="stylesheet" href="static/css/styles.css">
 
 </head>
 <body>
 
-   <header class="header">
-    <img src="../static/img/logo.png" alt="Logo elleskiin" class="logo">
+<header class="header">
+    <img src="static/img/logo.png" alt="Logo elleskiin" class="logo">
+
     <h1>elleskiin</h1>
     <p>Naturaleza de cuidado</p>
 </header>
 
-<section>
+<section class="producto">
     <h2>Set Facial Ozonizado</h2>
+
     <p>
-        Set facial premium elaborado de forma artesanal con ingredientes naturales y ozonizados
-        que hidratan, protegen y retrasan el envejecimiento de la piel.
+        Set facial premium elaborado de forma artesanal con ingredientes naturales
+        y ozonizados que hidratan, protegen y retrasan el envejecimiento de la piel.
     </p>
+
+    <div class="galeria">
+      <img src="static/img/producto1.jpg">
+      <img src="static/img/producto2.jpg">
+      <img src="static/img/producto3.jpg">
+
+    </div>
 
     <ul>
         <li><strong>Cleansing Gel</strong> – Limpiador facial</li>
@@ -29,65 +40,26 @@
     </ul>
 
     <p>
-        Recomendado para personas de <strong>30 años en adelante</strong>,
-        para ambos sexos, con preferencia en cuidado femenino.
+        Recomendado para personas de <strong>30 años en adelante</strong>.
     </p>
 
     <button class="btn-primary" onclick="agregarAlCarrito('Set Facial Ozonizado', 1200)">
-    Comprar ahora
+        Comprar ahora
     </button>
-
-
 </section>
 
-
-    <section>
-        <h2>Descubre el poder del ozono en tu piel</h2>
-        <p>
-            Set facial premium elaborado de forma artesanal con ingredientes
-            naturales y ozonizados que hidratan, protegen y retrasan el
-            envejecimiento de la piel.
-        </p>
-    </section>
-
-    <section>
-        <h2>Set Facial Ozonizado</h2>
-        <ul>
-            <li>Cleansing Gel – Limpiador facial</li>
-            <li>CellSerum FPS 30 – Sérum de día</li>
-            <li>CellCream – Crema de noche</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Asesoría personalizada</h2>
-        <p>
-            Te acompañamos en el cuidado de tu piel con recomendaciones
-            personalizadas según tus necesidades.
-        </p>
-        <p>
-            📧 elleskiin@gmail.com <br>
-            📞 55 4619 1446
-        </p>
-    </section>
-
-    <footer>
-        <p>© 2026 elleskiin · Todos los derechos reservados</p>
-    </footer>
-
-    <script src="../static/js/carrito.js"></script>
-
-   <section>
+<section class="carrito">
     <h2>🛒 Carrito</h2>
     <ul id="lista-carrito"></ul>
     <p>Total: <span id="total">$0</span></p>
 </section>
- 
-<section>
+
+<section class="asesoria">
     <h2>Asesoría personalizada</h2>
+
     <p>
-        Te acompañamos en el cuidado de tu piel con recomendaciones
-        personalizadas según tus necesidades.
+        📧 <strong>Correo:</strong> elleskiin@gmail.com <br>
+        📞 <strong>Teléfono:</strong> 55 4619 1446
     </p>
 
     <form id="form-asesoria">
@@ -96,23 +68,31 @@
         <input type="tel" placeholder="Teléfono" required>
         <input type="number" placeholder="Edad" min="18" required>
 
-        <textarea placeholder="Cuéntanos sobre tu piel o dudas"></textarea>
+        <textarea placeholder="Cuéntanos sobre tu piel o tus dudas"></textarea>
 
         <button type="submit" class="btn-primary">
             Solicitar asesoría
         </button>
     </form>
 
-    <p id="mensaje-exito" style="display:none; color:green;">
+    <p id="mensaje-exito">
         ✔ Gracias, pronto nos pondremos en contacto contigo.
     </p>
 </section>
 
-<a href="https://wa.me/525546191446?text=Hola%20me%20interesa%20el%20set%20facial%20ozonizado%20de%20elleskiin.%20¿Me%20pueden%20asesorar?"
+<footer>
+    <p>© 2026 elleskiin · Todos los derechos reservados</p>
+</footer>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/525546191446?text=Hola%20me%20interesa%20el%20set%20facial%20ozonizado%20de%20elleskiin"
    class="whatsapp-float"
    target="_blank">
    💬
 </a>
+
+<!-- JS -->
+<script src="static/js/carrito.js"></script>
 
 
 </body>
