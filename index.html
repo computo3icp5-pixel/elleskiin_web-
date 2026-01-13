@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>elleskiin | Naturaleza de cuidado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+   <link rel="stylesheet" href="static/css/styles.css">
+
+</head>
+<body>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#carrito">Carrito</a></li>
+        <li><a href="#asesoria">Asesoría</a></li>
+    </ul>
+</nav>
+
+
+
+
+<header class="header" id="inicio">
+
+    <img src="static/img/logo.png" alt="Logo elleskiin" class="logo">
+
+    <h1>elleskiin</h1>
+    <p>Naturaleza de cuidado</p>
+</header>
+
+
+<section class="producto" id="productos">
+
+    <h2>Set Facial Ozonizado</h2>
+
+    <p>
+        Set facial premium elaborado de forma artesanal con ingredientes naturales
+        y ozonizados que hidratan, protegen y retrasan el envejecimiento de la piel.
+    </p>
+
+  
+
+    <div class="productos-lista">
+
+    <div class="producto-item">
+        <img src="static/img/producto1.jpg" alt="Cleansing Gel">
+        <h3>Cleansing Gel</h3>
+        <p>Limpiador facial ozonizado</p>
+        <p class="precio">$600 MXN</p>
+        <button onclick="agregarAlCarrito('Cleansing Gel', 600)">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto-item">
+        <img src="static/img/producto2.jpg" alt="CellSerum FPS 30">
+        <h3>CellSerum FPS 30</h3>
+        <p>Sérum de día con protección solar</p>
+        <p class="precio">$600 MXN</p>
+        <button onclick="agregarAlCarrito('CellSerum FPS 30', 600)">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto-item">
+        <img src="static/img/producto3.jpg" alt="CellCream">
+        <h3>CellCream</h3>
+        <p>Crema facial nocturna</p>
+        <p class="precio">$600 MXN</p>
+        <button onclick="agregarAlCarrito('CellCream', 600)">
+            Agregar al carrito
+        </button>
+    </div>
+
+</div>
+
+
+    <p>
+        Recomendado para personas de <strong>30 años en adelante</strong>.
+    </p>
+
+    <button class="btn-primary" onclick="agregarAlCarrito('Set Facial Ozonizado', 1850)">
+        Comprar ahora
+    </button>
+</section>
+
+<!-- BOTÓN CARRITO -->
+<div class="carrito-btn" onclick="toggleCarrito()">
+    🛒 <span id="contador-carrito">0</span>
+</div>
+
+<!-- PANEL CARRITO -->
+<section class="carrito oculto" id="carrito"> 
+    <h2>Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p>Total: <span id="total">$0</span></p>
+
+    <button class="btn-primary" onclick="vaciarCarrito(event)">
+        Vaciar carrito
+    </button>
+
+    <button class="btn-finalizar" onclick="finalizarCompra()">
+    Finalizar compra
+</button>
+
+</section>
+
+
+<section class="asesoria" id="asesoria">
+
+    <h2>Asesoría personalizada</h2>
+
+    <p>
+        📧 <strong>Correo:</strong> elleskiin@gmail.com <br>
+        📞 <strong>Teléfono:</strong> 55 47119245
+    </p>
+
+    <form id="form-asesoria">
+
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
+
+    <input type="email" name="correo" placeholder="Correo electrónico" required>
+
+    <input type="tel" name="telefono" placeholder="Teléfono" required>
+
+    <input type="number" name="edad" placeholder="Edad" min="18" required>
+
+    <textarea name="mensaje" placeholder="Cuéntanos sobre tu piel o tus dudas" required></textarea>
+
+    <button type="submit" class="btn-primary">
+        Solicitar asesoría
+    </button>
+
+</form>
+
+
+
+
+    <p id="mensaje-exito">
+        ✔ Gracias, pronto nos pondremos en contacto contigo.
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 elleskiin · Todos los derechos reservados</p>
+</footer>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/525547119245?text=Hola%20me%20interesa%20el%20set%20facial%20ozonizado%20de%20elleskiin"
+   class="whatsapp-float"
+   target="_blank">
+   💬
+</a>
+
+<!-- JS -->
+<script src="static/js/carrito.js"></script>
+
+
+</body>
+</html>

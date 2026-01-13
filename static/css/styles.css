@@ -1,0 +1,311 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #f4f1ec;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+/* SECCIONES */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #6b705c;
+}
+
+/* PRODUCTO */
+.galeria {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.galeria img {
+    width: 30%;
+    border-radius: 10px;
+}
+
+/* BOTÓN */
+.btn-primary {
+    background-color: #6b705c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #5a5f4a;
+}
+
+/* FORMULARIO */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* CARRITO */
+.carrito ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* MENSAJE */
+#mensaje-exito {
+    display: none;
+    color: green;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f1ec;
+}
+
+/* WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+/* ===== BARRA DE NAVEGACIÓN ===== */
+
+.navbar {
+    background-color: #f5f5f5;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar a:hover {
+    color: #2e7d32;
+}
+
+/* ===== PRODUCTOS ===== */
+
+.productos-lista {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.producto-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.producto-item:hover {
+    transform: translateY(-10px);
+}
+
+.producto-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 18px;
+    color: #2e7d32;
+    margin: 10px 0;
+}
+
+/* ===== EFECTO HOVER EN IMÁGENES ===== */
+
+.producto-item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.producto-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* CARRITO FIJO ARRIBA A LA DERECHA */
+
+
+.carrito h2 {
+    font-size: 18px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.carrito ul {
+    list-style: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+
+/* BOTÓN CARRITO */
+.carrito-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #6b705c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1100;
+}
+
+/* PANEL CARRITO */
+.carrito {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    padding: 15px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 8px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: #ffe5e5;
+    border-radius: 50%;
+    transform: scale(1.2);
+}
+
+/* ANIMACIÓN ELIMINAR */
+.eliminando {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* MENSAJE FLOTANTE */
+.mensaje-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #6b705c;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    font-size: 14px;
+    z-index: 2000;
+    animation: fadeInOut 2s ease;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(20px); }
+}
+
+.carrito.oculto {
+    opacity: 0;
+    transform: translateX(20px);
+    pointer-events: none;
+}
+
+/* BOTÓN FINALIZAR COMPRA */
+.btn-finalizar {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    background: #6b705c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-finalizar:hover {
+    background: #5a5f4a;
+}
+
